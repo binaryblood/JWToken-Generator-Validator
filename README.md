@@ -20,11 +20,13 @@ System.out.println(gen.getJWTToken(prop)); // Generate JWT Token
 
 Do the below steps before generating JWT Tokens
 Create certificate.pem and secret.pem file with open ssl
-$ openssl req -nodes -text -x509 -newkey rsa:2048 -keyout secret.pem -out certificate.pem -days 356
-
+```console
+openssl req -nodes -text -x509 -newkey rsa:2048 -keyout secret.pem -out certificate.pem -days 356
+```
 Convert the secret.pem file to secret.key
-$ openssl pkcs8 -topk8 -inform PEM -outform DER -in secret.pem -nocrypt > secret.key
-
+```console
+openssl pkcs8 -topk8 -inform PEM -outform DER -in secret.pem -nocrypt > secret.key
+```
 ------------------------------------------------------------------------------------------------------------------------------------
 ## Configure the config.properties file
 
