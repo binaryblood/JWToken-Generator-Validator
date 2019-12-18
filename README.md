@@ -14,7 +14,7 @@ Properties prop = new Properties();
 InputStream input = App.class.getClassLoader().getResourceAsStream("config.properties");
 prop.load(input);
 System.out.println(gen.getJWTToken(prop)); // Generate JWT Token
-
+```
 ------------------------------------------------------------------------------------------------------------------------------------
 ## Create public and private keys
 
